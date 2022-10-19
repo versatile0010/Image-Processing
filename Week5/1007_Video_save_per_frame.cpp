@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// 2022. 10. 07. ภüฑโภüภฺฐ๘วะบฮ ภฬภ็ว๖
+// 2022. 10. 07. ร€รผยฑรขร€รผร€รยฐรธรรยบร ร€รร€รงรรถ
 
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
