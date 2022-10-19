@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// 2022. 10. 04. Àü±âÀüÀÚ°øÇĞºÎ ÀÌÀçÇö
+// 2022. 10. 04. ì „ê¸°ì „ìê³µí•™ë¶€ ì´ì¬í˜„
 
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
@@ -49,7 +49,7 @@ void getGradientMap(float** X, float** Y, Mat input) {
 			for (yy = y - 1; yy <= y + 1; yy++) {
 				for (xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv_x += input.at<uchar>(yy, xx) * mask_x[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_y += input.at<uchar>(yy, xx) * mask_y[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
@@ -65,7 +65,7 @@ void getGradientMap(float** X, float** Y, Mat input) {
 		}
 	}
 }
-// Á¶¸í º¯È­¿¡ robust ÇÏÁö¸¸ scale º¯È­¿¡ Ãë¾à
+// ì¡°ëª… ë³€í™”ì— robust í•˜ì§€ë§Œ scale ë³€í™”ì— ì·¨ì•½
 Mat Harris_CornerDetect(Mat img, float k, Mat cornerMap, int thresholding) {
 	// img - Input image. It should be grayscale and float32 type.
 	// k - Harris detector free parameter in the equation.
@@ -85,7 +85,7 @@ Mat Harris_CornerDetect(Mat img, float k, Mat cornerMap, int thresholding) {
 			for (int yy = y - 1; yy <= y + 1; yy++) {
 				for (int xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < gray_img.rows && xx >= 0 && xx < gray_img.cols) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv += gray_img.at<uchar>(yy, xx) * gaussian_mask[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
 				}
@@ -201,7 +201,7 @@ float get_similarity(float* obj1, float* obj2, int size) {
 	score = sqrt(score);
 	//score = sqrt(score);
 	// use Euclidean distance
-	// ´õ ÀÛÀ»¼ö·Ï À¯»çµµ°¡ ³ôÀº °Í
+	// ë” ì‘ì„ìˆ˜ë¡ ìœ ì‚¬ë„ê°€ ë†’ì€ ê²ƒ
 	return score;
 }
 Mat HOG_arround_conner(Mat ref, Mat tar, float k) {
@@ -259,7 +259,7 @@ Mat HOG_arround_conner(Mat ref, Mat tar, float k) {
 			for (yy = y - 1; yy <= y + 1; yy++) {
 				for (xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv_x += ref.at<uchar>(yy, xx) * mask_x[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_y += ref.at<uchar>(yy, xx) * mask_y[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
@@ -289,7 +289,7 @@ Mat HOG_arround_conner(Mat ref, Mat tar, float k) {
 			for (yy = y - 1; yy <= y + 1; yy++) {
 				for (xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv_x += tar.at<uchar>(yy, xx) * mask_x[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_y += tar.at<uchar>(yy, xx) * mask_y[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
@@ -313,12 +313,12 @@ Mat HOG_arround_conner(Mat ref, Mat tar, float k) {
 	float* histo2 = nullptr;
 
 	struct sim_x_y {
-		int x; // ÁÂÇ¥
+		int x; // ì¢Œí‘œ
 		int y;
-		float sim; // À¯»çµµ
+		float sim; // ìœ ì‚¬ë„
 	};
 
-	struct compare { // similiarity °¡ ÀÛÀº ¾Ö°¡ ´õ À¯»çÇÑ°ÅÀÓ.
+	struct compare { // similiarity ê°€ ì‘ì€ ì• ê°€ ë” ìœ ì‚¬í•œê±°ì„.
 		bool operator()(const sim_x_y& m1, const sim_x_y& m2) {
 			return m1.sim > m2.sim;
 		}
@@ -328,23 +328,23 @@ Mat HOG_arround_conner(Mat ref, Mat tar, float k) {
 	
 	for (int i = 0; i < ref.rows; i++) {
 		for (int j = 0; j < ref.cols; j++) {
-			if (ref_cornerMap.at<uchar>(i, j) == 0) continue; // reference ¿¡¼­ ÄÚ³Ê°¡ ¾Æ´Ï¸é pass
-			histo1 = get_hog_histogram_around_corner(ref, j, i, ref_mag, ref_dir_arr); // ÄÚ³ÊÀÌ¸é histogram ÃßÃâ
+			if (ref_cornerMap.at<uchar>(i, j) == 0) continue; // reference ì—ì„œ ì½”ë„ˆê°€ ì•„ë‹ˆë©´ pass
+			histo1 = get_hog_histogram_around_corner(ref, j, i, ref_mag, ref_dir_arr); // ì½”ë„ˆì´ë©´ histogram ì¶”ì¶œ
 
 			while(!pq.empty())pq.pop();
 			for (int m = 0; m < tar.rows; m++) {
 				for (int n = 0; n < tar.cols; n++) {
-					if (tar_cornerMap.at<uchar>(m, n) == 0) continue; // target ¿¡¼­ ÄÚ³Ê°¡ ¾Æ´Ï¸é pass
+					if (tar_cornerMap.at<uchar>(m, n) == 0) continue; // target ì—ì„œ ì½”ë„ˆê°€ ì•„ë‹ˆë©´ pass
 					sim_x_y temp_info = {0,0,0.0}; float sim = 0.0;
-					// target ¿¡¼­ ÄÚ³Ê point ÀÌ¸é histogram ÃßÃâ
+					// target ì—ì„œ ì½”ë„ˆ point ì´ë©´ histogram ì¶”ì¶œ
 					histo2 = get_hog_histogram_around_corner(tar, n, m, tar_mag, tar_dir_arr);
-					sim = get_similarity(histo1, histo2, 9); // À¯»çµµ ÃßÃâ
+					sim = get_similarity(histo1, histo2, 9); // ìœ ì‚¬ë„ ì¶”ì¶œ
 
 					temp_info.sim = sim;
 					temp_info.x = n;
 					temp_info.y = m;
 
-					pq.push(temp_info); // min_heap ¿¡ ³Ö±â
+					pq.push(temp_info); // min_heap ì— ë„£ê¸°
 
 				}
 			}
