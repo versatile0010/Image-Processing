@@ -19,7 +19,7 @@ int ORB_WTA_K = 2;
 int ORB_PATCH_SIZE = 31;
 
 // Some image matching options
-float MIN_H_ERROR = 120.50f; // Maximum error in pixels to accept an inlier  <- ¾ê¸¦ Á¶ÀýÇÏ¸é ransac ¿µÇâÀ» ¾Ë ¼ö ÀÖÀ½.
+float MIN_H_ERROR = 120.50f; // Maximum error in pixels to accept an inlier  <- ì–˜ë¥¼ ì¡°ì ˆí•˜ë©´ ransac ì˜í–¥ì„ ì•Œ ìˆ˜ ìžˆìŒ.
 float DRATIO = 0.80f;
 
 void main() {
@@ -119,9 +119,9 @@ void main() {
 
 /*
 		RANSAC : Random Sampling Consensus
-				 outlier ÀÇ ¿µÇâÀ» ÁÙÀÌ±â À§ÇØ, random sampling ÇÏ´Â °ÍÀÓ.
-				 ¿©·¯ ¹ø random sampling ÇØ¼­ ÃÖ°íÀÇ consensus ¸¦ »Ì´Â(voting) ¹æ½ÄÀ¸·Î outlier ¿¡ robust ÇÑ °ÍÀÌ ÃÖ°í ÀåÁ¡!
-				 RANSAC À» µ¹¸®Áö ¾ÊÀ¸¸é Outlier ¿¡ ÀÇÇÑ ¿µÇâÀ» ³Ê¹« Å©°Ô ¹Þ¾Æ¼­, ¼º´É Å©°Ô ÀúÇÏµÉ ¿ì·Á.
+				 outlier ì˜ ì˜í–¥ì„ ì¤„ì´ê¸° ìœ„í•´, random sampling í•˜ëŠ” ê²ƒìž„.
+				 ì—¬ëŸ¬ ë²ˆ random sampling í•´ì„œ ìµœê³ ì˜ consensus ë¥¼ ë½‘ëŠ”(voting) ë°©ì‹ìœ¼ë¡œ outlier ì— robust í•œ ê²ƒì´ ìµœê³  ìž¥ì !
+				 RANSAC ì„ ëŒë¦¬ì§€ ì•Šìœ¼ë©´ Outlier ì— ì˜í•œ ì˜í–¥ì„ ë„ˆë¬´ í¬ê²Œ ë°›ì•„ì„œ, ì„±ëŠ¥ í¬ê²Œ ì €í•˜ë  ìš°ë ¤.
 
 
 */
