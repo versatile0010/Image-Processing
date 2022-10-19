@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// 2022. 09. 30. Àü±âÀüÀÚ°øÇĞºÎ ÀÌÀçÇö
+// 2022. 09. 30. ì „ê¸°ì „ìê³µí•™ë¶€ ì´ì¬í˜„
 // reference : https://darkpgmr.tistory.com/131
 
 #include <opencv2/imgproc.hpp>
@@ -33,7 +33,7 @@ void getGradientMap(float** X, float** Y, Mat input) {
 			for (yy = y - 1; yy <= y + 1; yy++) {
 				for (xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv_x += input.at<uchar>(yy, xx) * mask_x[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_y += input.at<uchar>(yy, xx) * mask_y[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
@@ -50,7 +50,7 @@ void getGradientMap(float** X, float** Y, Mat input) {
 	}
 }
 
-// Á¶¸í º¯È­¿¡ robust ÇÏÁö¸¸ scale º¯È­¿¡ Ãë¾à
+// ì¡°ëª… ë³€í™”ì— robust í•˜ì§€ë§Œ scale ë³€í™”ì— ì·¨ì•½
 Mat Harris_CornerDetect(Mat img, float k) {
 	// img - Input image. It should be grayscale and float32 type.
 	// k - Harris detector free parameter in the equation.
@@ -70,7 +70,7 @@ Mat Harris_CornerDetect(Mat img, float k) {
 			for (int yy = y - 1; yy <= y + 1; yy++) {
 				for (int xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < gray_img.rows && xx >= 0 && xx < gray_img.cols) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv += gray_img.at<uchar>(yy, xx) * gaussian_mask[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
 				}
