@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// 2022. 09. 16. Àü±âÀüÀÚ°øÇĞºÎ ÀÌÀçÇö
-// 09.16 Assignment : bilinear ±¸ÇöÇÏ°í, nn method, average method ¶û ¼º´É ºñ±³ ºĞ¼®ÇÏ´Â ·¹Æ÷Æ® ÀÛ¼ºÇÏ±â
+// 2022. 09. 16. ì „ê¸°ì „ìê³µí•™ë¶€ ì´ì¬í˜„
+// 09.16 Assignment : bilinear êµ¬í˜„í•˜ê³ , nn method, average method ë‘ ì„±ëŠ¥ ë¹„êµ ë¶„ì„í•˜ëŠ” ë ˆí¬íŠ¸ ì‘ì„±í•˜ê¸°
 
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
