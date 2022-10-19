@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-// 2022. 10. 07. Àü±âÀüÀÚ°øÇĞºÎ ÀÌÀçÇö
+// 2022. 10. 07. ì „ê¸°ì „ìê³µí•™ë¶€ ì´ì¬í˜„
 // https://velog.io/@dusruddl2/Photogrammetry-8-1.-Visual-Features-Desciptors-SIFT-BRIEF-ORB
 
 #include <opencv2/imgproc.hpp>
@@ -31,8 +31,8 @@ void main() {
 	string img_path1, img_path2, homography_path;
 	double t1 = 0.0, t2 = 0.0;
 	vector<KeyPoint> kpts1_orb, kpts2_orb;
-	vector<Point2f> matches_orb, inliers_orb; // feature matching ½Ã Àß µÈ°Å¸¦ matches_orb, ¾ÈµÈ°Å¸¦ inliers_orb
-											  // RANSAC algorithm À¸·Î ÀÌ¸¦ °É·¯³¿.
+	vector<Point2f> matches_orb, inliers_orb; // feature matching ì‹œ ì˜ ëœê±°ë¥¼ matches_orb, ì•ˆëœê±°ë¥¼ inliers_orb
+											  // RANSAC algorithm ìœ¼ë¡œ ì´ë¥¼ ê±¸ëŸ¬ëƒ„.
 											  // Random Sampling Consensus
 	vector<vector<DMatch>> dmatches_orb;
 	Mat desc1_orb, desc2_orb;
