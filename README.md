@@ -1,6 +1,5 @@
 # openCV-cpp
-* This is a Course of ADVANCED ELECTRICAL AND ELECTRONIC DESIGN LABORATORY AND SOFTWARE PRACTICE(2022-Fall), Konkuk Univ.
-Introduction to computer vision
+* This is a Course of *ADVANCED ELECTRICAL AND ELECTRONIC DESIGN LABORATORY AND SOFTWARE PRACTICE(2022-Fall)*, Konkuk Univ.
 
 |Week|Topic|Description|
 |------|---|---|
