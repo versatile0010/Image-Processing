@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 // Assignment
-// 2022. 09. 23. Àü±âÀüÀÚ°øÇĞºÎ ÀÌÀçÇö
+// 2022. 09. 23. ì „ê¸°ì „ìê³µí•™ë¶€ ì´ì¬í˜„
 
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
@@ -43,7 +43,7 @@ float* get_hog_histogram(Mat input, const char* filename) {
 			for (yy = y - 1; yy <= y + 1; yy++) {
 				for (xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < height && xx >= 0 && xx < width) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv_x += input.at<uchar>(yy, xx) * mask_x[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_y += input.at<uchar>(yy, xx) * mask_y[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 					}
@@ -106,7 +106,7 @@ float get_similarity(float* obj1, float* obj2, int size) {
 
 	score = sqrt(score);
 	// use Euclidean distance
-	// ´õ ÀÛÀ»¼ö·Ï À¯»çµµ°¡ ³ôÀº °Í
+	// ë” ì‘ì„ìˆ˜ë¡ ìœ ì‚¬ë„ê°€ ë†’ì€ ê²ƒ
 	return score;
 }
 
