@@ -1,7 +1,6 @@
 #include<opencv2/imgproc.hpp>
 #include<opencv2/highgui.hpp>
 #include <opencv2/video/tracking.hpp>
-#include <vector>
 #include <stdio.h>
 #include <Windows.h>
 #define Width 320*2
