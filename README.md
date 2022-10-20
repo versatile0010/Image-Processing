@@ -1,4 +1,4 @@
-# openCV-cpp
+#  :earth_americas: openCV-cpp
 * This is a Course Project of ***ADVANCED ELECTRICAL AND ELECTRONIC DESIGN LABORATORY AND SOFTWARE PRACTICE(2022-Fall)*,** Konkuk Univ.
 
 |Week|Topic|Description|
