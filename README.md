@@ -5,8 +5,8 @@
 |------|---|---|
 |Week 2.|[Fundamentals of image processing](https://github.com/versatile0010/openCV-cpp/tree/main/Week2)|Implementation of ImageResize, ImageRotate, Simple interpolation|
 |Week 3.|[Edge-based feature extraction (1)](https://github.com/versatile0010/openCV-cpp/tree/main/Week3)|Generate gradient map, Implementation of HOG Descriptor|
-|Week 4.|[Edge-based feature extraction (2)](https://github.com/versatile0010/openCV-cpp/tree/main/Week4)|Implementation of Harris Corner detector|
-|Week 5.|[Corner-based feature extraction](https://github.com/versatile0010/openCV-cpp/tree/main/Week5)|ORB|
+|Week 4.|[Corner-based feature extraction(1)](https://github.com/versatile0010/openCV-cpp/tree/main/Week4)|Implementation of Harris Corner detector|
+|Week 5.|[Corner-based feature extraction(2)](https://github.com/versatile0010/openCV-cpp/tree/main/Week5)|ORB|
 |Week 6.|[Optical flow](https://github.com/versatile0010/openCV-cpp/tree/main/Week6)|Lucas-Kanade Algorithm, Gunnar-farneback|
 |Week 8.|Face detection|.|
 |Week 9.|Face recognition|.|
