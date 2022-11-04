@@ -8,8 +8,8 @@
 |Week 4.|[Corner-based feature extraction(1)](https://github.com/versatile0010/openCV-cpp/tree/main/Week4)|Implementation of Harris Corner detector|
 |Week 5.|[Corner-based feature extraction(2)](https://github.com/versatile0010/openCV-cpp/tree/main/Week5)|ORB|
 |Week 6.|[Optical flow](https://github.com/versatile0010/openCV-cpp/tree/main/Week6)|Lucas-Kanade Algorithm, Gunnar-farneback|
-|Week 8.|Face detection|Implementation of Face Detector with HOG Descriptor(one-shot)|
-|Week 9.|Face recognition|.|
+|Week 8.|Face detection|Implementation of Face Detector with HOG Descriptor|
+|Week 9.|Face verification|Implementation of Face verification with LBP Descriptor|
 |Week 10.|Facial landmark tracking|.|
 |Week 11.|Image segmentation (1)|.|
 |Week 12.|Image segmentation (2)|.|
