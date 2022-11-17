@@ -52,4 +52,4 @@ reference face 에 대한 LBP histogram 을 저장한 다음, real-time 으로 d
 에 대하여 block 단위로 sliding 하는데, block 내의 center pixel 에 대하여 8 – neighbors 에
 대하여 LBP 를 생성하는 방식을 통하여 target LBP histogram 을 구하고 Cosine similarity 를
 thresholding 하여 face verification 을 진행하였다.
-![image](https://user-images.githubusercontent.com/96612168/200472995-715e7069-bf3d-4fdf-a446-e0f7989e7dcf.png)
+
