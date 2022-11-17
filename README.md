@@ -15,7 +15,7 @@
 |Week 12.|Image segmentation (2)|.|
 |Week 13.|Image inpainting|.|
 |Week 14.|Presentation of projects|.|
-  
+   
 
 ---
 ## Week 4. Feature matching with Harris Corner detector
