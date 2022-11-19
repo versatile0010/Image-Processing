@@ -21,10 +21,6 @@
 ## Week 4. Feature matching with Harris Corner detector
 
 ![image](https://user-images.githubusercontent.com/96612168/200473264-63022518-f221-48f0-b009-d1a3f7db8e07.png)
-![image](https://user-images.githubusercontent.com/96612168/200473312-3da226cf-bf7c-4ea9-8349-13c946a9fd68.png)
-![image](https://user-images.githubusercontent.com/96612168/200473324-49c0fdc0-9c41-497c-b8c8-9afbd452da2b.png)
-![image](https://user-images.githubusercontent.com/96612168/200473348-b79c8b7d-f9ea-4240-9ff3-1eb58d06651e.png)
-
 
 Harris corner detector 으로 검출한 corner point 에 대해서
 HOG descriptor 으로 ref.bmp 와 tar.bmp 의 유사도가 가장 좋은 corner point
