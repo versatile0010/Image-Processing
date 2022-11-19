@@ -54,5 +54,6 @@ reference face 에 대한 LBP histogram 을 저장한 다음, real-time 으로 d
 thresholding 하여 face verification 을 진행하였다.
 
 ## Week 10. Face Verification with Facial Landmarks
+![image](https://user-images.githubusercontent.com/96612168/202834540-636893bb-f572-4223-8bcb-0d18ac108cfa.png)
 SDM 알고리즘을 이용하여, Facial Landmarks 를 검출한 뒤 Landmark point 에 대한 LBP histogram 으로 face verification 기능을 구현한다.
 
