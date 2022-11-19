@@ -53,3 +53,6 @@ reference face 에 대한 LBP histogram 을 저장한 다음, real-time 으로 d
 대하여 LBP 를 생성하는 방식을 통하여 target LBP histogram 을 구하고 Cosine similarity 를
 thresholding 하여 face verification 을 진행하였다.
 
+## Week 10. Face Verification with Facial Landmarks
+SDM 알고리즘을 이용하여, Facial Landmarks 를 검출한 뒤 Landmark point 에 대한 LBP histogram 으로 face verification 기능을 구현한다.
+
