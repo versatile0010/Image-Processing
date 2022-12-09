@@ -1,6 +1,7 @@
 #  :earth_americas: openCV-cpp
 * This is a Course Project of ***ADVANCED ELECTRICAL AND ELECTRONIC DESIGN LABORATORY AND SOFTWARE PRACTICE(2022-Fall)*,** Konkuk Univ.
-
+* 건국대학교 전기전자공학부, 전기전자심화설계(2022. 2학기) 3학년 학부 실습 수업 중 진행한 과제 및 프로젝트를 정리한 repository 입니다.
+ 
 |Week|Topic|Description|
 |------|---|---|
 |Week 2.|[Fundamentals of image processing](https://github.com/versatile0010/openCV-cpp/tree/main/Week2)|Implementation of ImageResize, ImageRotate, Simple interpolation|
