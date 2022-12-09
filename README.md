@@ -11,7 +11,7 @@
 |Week 8.|[Face detection](https://github.com/versatile0010/openCV-cpp/tree/main/Week8)|Implementation of Face Detector with HOG Descriptor|
 |Week 9.|[Face verification](https://github.com/versatile0010/openCV-cpp/tree/main/Week9)|Implementation of Face verification with LBP Descriptor|
 |Week 10.|[Facial landmark tracking](https://github.com/versatile0010/openCV-cpp/tree/main/Week10)|Implementation of Face Verification with Facial Landmarks Tracking|
-|Week 14.|projects|.|
+|Week 14.|[Final projects](https://github.com/versatile0010/openCV-cpp/tree/main/Final-Project)|K-means Clustering based Inpainting tool|
    
 
 ---
@@ -49,4 +49,8 @@ thresholding 하여 face verification 을 진행하였다.
 ## Week 10. Face Verification with Facial Landmarks
 ![image](https://user-images.githubusercontent.com/96612168/202834540-636893bb-f572-4223-8bcb-0d18ac108cfa.png)
 SDM 알고리즘을 이용하여, Facial Landmarks 를 검출한 뒤 Landmark point 에 대한 LBP histogram 으로 face verification 기능을 구현한다.
+
+## Week 11-14. Final proejct : K-means clustering based Inpainting Tool
+![image](https://user-images.githubusercontent.com/96612168/206603417-fd3d6873-e6bb-446b-a9e6-cbf51ec8a19a.png)
+![image](https://user-images.githubusercontent.com/96612168/206603462-a6c55571-4342-43f8-a33c-e420ce4c0a0e.png)
 
