@@ -11,10 +11,7 @@
 |Week 8.|[Face detection](https://github.com/versatile0010/openCV-cpp/tree/main/Week8)|Implementation of Face Detector with HOG Descriptor|
 |Week 9.|[Face verification](https://github.com/versatile0010/openCV-cpp/tree/main/Week9)|Implementation of Face verification with LBP Descriptor|
 |Week 10.|[Facial landmark tracking](https://github.com/versatile0010/openCV-cpp/tree/main/Week10)|Implementation of Face Verification with Facial Landmarks Tracking|
-|Week 11.|Image segmentation (1)|.|
-|Week 12.|Image segmentation (2)|.|
-|Week 13.|Image inpainting|.|
-|Week 14.|Presentation of projects|.|
+|Week 14.|projects|.|
    
 
 ---
