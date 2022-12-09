@@ -2,7 +2,7 @@
 
 // Assignment
 // 2022. 09. 23. 전기전자공학부 이재현
-
+ 
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 
