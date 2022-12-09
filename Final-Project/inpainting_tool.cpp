@@ -28,7 +28,7 @@ struct ITEMS {
 
 template <class T1, class T2>
 float get_distance(T1* obj1, T2* obj2, String type) {
-	//RGB pixel ¿¡ ´ëÇÑ distance ¸¦ °è»êÇÔ
+	//RGB pixel ì— ëŒ€í•œ distance ë¥¼ ê³„ì‚°í•¨
 	float dist = 0;
 	for (int i = 0; i < 3; i++) {
 		if (type == "L2") {
@@ -45,7 +45,7 @@ float get_distance(T1* obj1, T2* obj2, String type) {
 void K_means_clustering(Mat& input, Mat& result, int k, string Distance_Metric) {
 	int width = input.cols;
 	int height = input.rows;
-	vector<Point>* st = new std::vector<Point>[k]; // clustered pixel point ¸¦ ´ãÀ» ¹è¿­
+	vector<Point>* st = new std::vector<Point>[k]; // clustered pixel point ë¥¼ ë‹´ì„ ë°°ì—´
 	srand(time(NULL)); // for random initialization
 
 	float** k_centroid_arr = (float**)calloc(k, sizeof(float*));
@@ -72,14 +72,14 @@ void K_means_clustering(Mat& input, Mat& result, int k, string Distance_Metric) 
 			st[i].clear();
 		for (int i = 0; i < k; i++) {
 			for (int j = 0; j < 3; j++) {
-				k_centroid_arr_save[i][j] = k_centroid_arr[i][j]; // ÇöÀç(¾÷µ¥ÀÌÆ® ÀÌÀü) center Á¤º¸¸¦ ÀúÀåÇÔ
+				k_centroid_arr_save[i][j] = k_centroid_arr[i][j]; // í˜„ì¬(ì—…ë°ì´íŠ¸ ì´ì „) center ì •ë³´ë¥¼ ì €ì¥í•¨
 				k_centroid_arr[i][j] = 0;
 			}
 		}
 
 		for (int y = 0; y < height; y++) {
 			for (int x = 0; x < width; x++) {
-				int present_pixel_arr[3]; // (x,y) ¿¡¼­ÀÇ r,g,b °ªÀ» ´ãÀ» ¹è¿­
+				int present_pixel_arr[3]; // (x,y) ì—ì„œì˜ r,g,b ê°’ì„ ë‹´ì„ ë°°ì—´
 				present_pixel_arr[0] = input.at<Vec3b>(y, x)[0];
 				present_pixel_arr[1] = input.at<Vec3b>(y, x)[1];
 				present_pixel_arr[2] = input.at<Vec3b>(y, x)[2];
@@ -93,19 +93,19 @@ void K_means_clustering(Mat& input, Mat& result, int k, string Distance_Metric) 
 						cluster_idx = i;
 					}
 				}
-				// ÃÖ¼Ò°Å¸®¸¦ °¡Áö´Â cluster À» Ã£¾ÒÀ¸¸é ÇØ´ç cluster ¿¡ ÁÂÇ¥¸¦ ÀúÀåÇÔ.
+				// ìµœì†Œê±°ë¦¬ë¥¼ ê°€ì§€ëŠ” cluster ì„ ì°¾ì•˜ìœ¼ë©´ í•´ë‹¹ cluster ì— ì¢Œí‘œë¥¼ ì €ì¥í•¨.
 				st[cluster_idx].push_back(Point(x, y));
-				// ±×¸®°í ÇÈ¼¿ rgb °ªÀ» ´©Àû½ÃÅ´.
+				// ê·¸ë¦¬ê³  í”½ì…€ rgb ê°’ì„ ëˆ„ì ì‹œí‚´.
 				k_centroid_arr[cluster_idx][0] += present_pixel_arr[0];
 				k_centroid_arr[cluster_idx][1] += present_pixel_arr[1];
 				k_centroid_arr[cluster_idx][2] += present_pixel_arr[2];
 			}
 		}
-		// À§ ´Ü°è¸¦ Áö³ª¸é, clustering ÀÌ ÇÑ¹ø µÈ °Í.
-		// ±×·¯¸é centroid ¸¦ updating
+		// ìœ„ ë‹¨ê³„ë¥¼ ì§€ë‚˜ë©´, clustering ì´ í•œë²ˆ ëœ ê²ƒ.
+		// ê·¸ëŸ¬ë©´ centroid ë¥¼ updating
 		for (int i = 0; i < k; i++) {
-			int size = st[i].size(); // °¢°¢ÀÇ cluster ·Î ºĞ·ùµÈ point °³¼ö¸¦ ¼À.
-			if (size == 0) continue; // ÇØ´ç cluster ·Î ºĞ·ùµÈ point °¡ ÇÏ³ªµµ ¾øÀ¸¸é continue;
+			int size = st[i].size(); // ê°ê°ì˜ cluster ë¡œ ë¶„ë¥˜ëœ point ê°œìˆ˜ë¥¼ ì…ˆ.
+			if (size == 0) continue; // í•´ë‹¹ cluster ë¡œ ë¶„ë¥˜ëœ point ê°€ í•˜ë‚˜ë„ ì—†ìœ¼ë©´ continue;
 			k_centroid_arr[i][0] /= size;
 			k_centroid_arr[i][1] /= size;
 			k_centroid_arr[i][2] /= size;
@@ -113,8 +113,8 @@ void K_means_clustering(Mat& input, Mat& result, int k, string Distance_Metric) 
 		for (int i = 0; i < k; i++) {
 			for (int j = 0; j < 3; j++) {
 				if (k_centroid_arr[i][j] != k_centroid_arr_save[i][j]) {
-					// ÀÌÀü centroid ÀÇ °ª°ú ´Ù¸£¸é, updating À» °è¼ÓÇÔ
-					// ¸¸¾à °°À¸¸é optimized µÇ¾ú´Ù°í ÆÇ´Ü.
+					// ì´ì „ centroid ì˜ ê°’ê³¼ ë‹¤ë¥´ë©´, updating ì„ ê³„ì†í•¨
+					// ë§Œì•½ ê°™ìœ¼ë©´ optimized ë˜ì—ˆë‹¤ê³  íŒë‹¨.
 					have_to_update = true;
 					break;
 				}
@@ -255,7 +255,7 @@ Mat get_mask(Mat& origin, Mat& clusterd_img, Rect roi, int k=0) {
 		}
 	}
 	mode_label = vr[k].first;
-	// roi ³»¿¡¼­ °¡Àå ¸¹Àº cluster label Àº mode_label ÀÌ´Ù.
+	// roi ë‚´ì—ì„œ ê°€ì¥ ë§ì€ cluster label ì€ mode_label ì´ë‹¤.
 	//cout << "mode _ label : " << mode_label << " vr[0].frist = " << vr[0].first << '\n';
 	for (int i = roi.y; i < roi.y + roi.height; i++) {
 		for (int j = roi.x; j < roi.x + roi.width; j++) {
@@ -362,7 +362,7 @@ void gaussian_filtering(Mat& img, Mat& output, Rect roi) {
 			for (int yy = y - 1; yy <= y + 1; yy++) {
 				for (int xx = x - 1; xx <= x + 1; xx++) { // calc conv_x, conv_y
 					if (yy >= 0 && yy < img.rows && xx >= 0 && xx < img.cols) {
-						// indexing ¿¡ ÁÖÀÇ!
+						// indexing ì— ì£¼ì˜!
 						conv_b += img.at<Vec3b>(yy, xx)[0] * gaussian_mask[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_g += img.at<Vec3b>(yy, xx)[1] * gaussian_mask[(yy - (y - 1)) * 3 + (xx - (x - 1))];
 						conv_r += img.at<Vec3b>(yy, xx)[2] * gaussian_mask[(yy - (y - 1)) * 3 + (xx - (x - 1))];
@@ -381,8 +381,8 @@ int main(int ac, char** av) {
 	int k = 0;
 	cout << "+===========================================================================+\n";
 	cout << "|                   K - means clustering based Inpainting tool              |\n";
-	cout << "|                  Àü±âÀüÀÚ½ÉÈ­¼³°è¹×SW½Ç½À(2022) Final project             |\n";
-	cout << "|                         Àü±âÀüÀÚ°øÇĞºÎ 201810909 ÀÌÀçÇö                   |\n";
+	cout << "|                  ì „ê¸°ì „ìì‹¬í™”ì„¤ê³„ë°SWì‹¤ìŠµ(2022) Final project             |\n";
+	cout << "|                         ì „ê¸°ì „ìê³µí•™ë¶€ 201810909 ì´ì¬í˜„                   |\n";
 	cout << "+===========================================================================+\n";
 
 	vector<string> file_list;
