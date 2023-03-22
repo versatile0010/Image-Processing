@@ -1,6 +1,8 @@
 #  :earth_americas: openCV-cpp
 * This is a Course Project of ***ADVANCED ELECTRICAL AND ELECTRONIC DESIGN LABORATORY AND SOFTWARE PRACTICE(2022-Fall)*,** Konkuk Univ.
 * 건국대학교 전기전자공학부, 전기전자심화설계(2022. 2학기) 3학년 학부 실습 수업 중 진행한 과제 및 프로젝트를 정리한 repository 입니다.
+
+<img src="https://user-images.githubusercontent.com/96612168/226813183-42f4ba26-f017-48e1-ba61-9a788f6ec792.png" alt="Example Image" width="250" height="200">
  
 |Week|Topic|Description|
 |------|---|---|
